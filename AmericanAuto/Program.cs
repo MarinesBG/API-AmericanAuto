@@ -1,6 +1,7 @@
 using AmericanAuto.Models.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using System;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,9 +9,22 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<AdminSettings>(builder.Configuration.GetSection("Admin"));
 builder.Services.Configure<AuthenticationConfig>(builder.Configuration.GetSection("AuthenticationConfig"));
 
-var authenticationConfig = builder.Configuration.GetSection("AuthenticationConfig").Get<AuthenticationConfig>();
+
+
+//Services
+//builder.Services.RegisterApplicationServices();
+builder.Services.AddScoped<ICustomerService<Customer>, CustomerService>();
+builder.Services.AddScoped<IRepository<Customer>, CustomerRepository>();
+
+//Database
+var connectionString = builder.Configuration.GetSection("ConnectionString").Value;
+builder.Services.AddDbContext<AppDbContext>(options =>
+   options.UseSqlServer(connectionString));
+
 
 // Add services to the container.
+var authenticationConfig = builder.Configuration.GetSection("AuthenticationConfig").Get<AuthenticationConfig>();
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
