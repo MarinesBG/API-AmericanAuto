@@ -5,6 +5,12 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmericanAuto", "AmericanAuto.csproj", "{C2275D98-1234-4D64-BCBA-96C831FC7B58}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmericanAuto.Services", "..\AmericanAuto.Services\AmericanAuto.Services.csproj", "{12402968-F080-4A56-8205-E57586D6D512}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmericanAuto.Database", "..\AmericanAuto.Database\AmericanAuto.Database.csproj", "{DEFBC6BC-5739-43F1-95FD-55F37792ED71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmericanAuto.Common", "..\AmericanAuto.Common\AmericanAuto.Common.csproj", "{FD2233B5-AF43-4ADD-8E22-B1BA4FE91BF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{C2275D98-1234-4D64-BCBA-96C831FC7B58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2275D98-1234-4D64-BCBA-96C831FC7B58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2275D98-1234-4D64-BCBA-96C831FC7B58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12402968-F080-4A56-8205-E57586D6D512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12402968-F080-4A56-8205-E57586D6D512}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12402968-F080-4A56-8205-E57586D6D512}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12402968-F080-4A56-8205-E57586D6D512}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEFBC6BC-5739-43F1-95FD-55F37792ED71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEFBC6BC-5739-43F1-95FD-55F37792ED71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEFBC6BC-5739-43F1-95FD-55F37792ED71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEFBC6BC-5739-43F1-95FD-55F37792ED71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD2233B5-AF43-4ADD-8E22-B1BA4FE91BF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD2233B5-AF43-4ADD-8E22-B1BA4FE91BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD2233B5-AF43-4ADD-8E22-B1BA4FE91BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD2233B5-AF43-4ADD-8E22-B1BA4FE91BF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
