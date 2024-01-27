@@ -27,13 +27,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddCors(options =>
 {
-    options.AddDefaultPolicy(
-        builder =>
-        {
-            builder.WithOrigins("https://americanauto.bg", "https://localhost:3000") // Add the origins you wish to allow
-                .AllowAnyHeader()
-                .AllowAnyMethod(); // You can also enable credentials, specific headers, methods etc.
-        });
+    options.AddPolicy("AllowAll", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
 });
 
 builder.Services.AddControllers();
@@ -83,7 +82,7 @@ app.UseSwaggerUI(options =>
     //options.RoutePrefix = string.Empty;
 });
 
-app.UseCors();
+app.UseCors("AllowAll");
 
 app.UseHttpsRedirection();
 
