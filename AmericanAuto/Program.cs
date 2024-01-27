@@ -1,15 +1,19 @@
+using AmericanAuto.Database;
+using AmericanAuto.Database.Core;
+using AmericanAuto.Database.Entities;
+using AmericanAuto.Database.Repository;
 using AmericanAuto.Models.Authentication;
+using AmericanAuto.Services.Interfaces;
+using AmericanAuto.Services.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using System;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.Configure<AdminSettings>(builder.Configuration.GetSection("Admin"));
 builder.Services.Configure<AuthenticationConfig>(builder.Configuration.GetSection("AuthenticationConfig"));
-
-
 
 //Services
 //builder.Services.RegisterApplicationServices();

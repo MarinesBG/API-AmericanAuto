@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AmericanAuto.Common\AmericanAuto.Common.csproj" />
+    <ProjectReference Include="..\AmericanAuto.Database\AmericanAuto.Database.csproj" />
+  </ItemGroup>
+
 </Project>
