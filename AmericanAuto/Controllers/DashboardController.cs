@@ -1,6 +1,4 @@
 using AmericanAuto.Attributes;
-using AmericanAuto.Models.Authentication;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AmericanAuto.Controllers
